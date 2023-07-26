@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-//import LoginPage from 'LoginPage'
+import LoginPage from '../pages/LoginPage'
 
 describe('Login POM Test',()=>{
     beforeEach(function(){
@@ -7,7 +7,8 @@ describe('Login POM Test',()=>{
         cy.visit('https://opensource-demo.orangehrmlive.com/')
     })
 it('Verify successfull Login',()=>{
-    
+   const LoginPage  = new LoginPage()
+   LoginPage.
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin')
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123')
     cy.get('.oxd-button').click()
