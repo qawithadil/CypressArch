@@ -1,22 +1,18 @@
 /// <reference types="cypress" />
-import LoginPage from '../pages/LoginPage'
+import lPage, { LoginPage } from '../pages/LoginPage'
 
 describe('Login POM Test',()=>{
+    const lPage = new LoginPage()
     beforeEach(function(){
       // Execute this before each function
-        cy.visit('https://opensource-demo.orangehrmlive.com/')
+        cy.visit('https://opensource-demo.orangehrmlive.com')
     })
 it('Verify successfull Login',()=>{
-   const LoginPage  = new LoginPage()
-   LoginPage.
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin')
-    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123')
-    cy.get('.oxd-button').click()
-    cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').should('have.text','Dashboard')
-    
-    
-    
-    
+  
+   lPage.enterUsername('admin')
+   lPage.enterPassword('admin123')
+   lPage.loginClick()
+        
 }),
 it('verify un-successfull Login',()=>{
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin')

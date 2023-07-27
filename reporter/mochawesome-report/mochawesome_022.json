@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-27T09:38:42.536Z",
+    "end": "2023-07-27T09:39:38.692Z",
+    "duration": 56156,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e4b700d9-8057-472e-b47c-6066acfb2cdb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCases\\POMDemo.cy.js",
+      "file": "cypress\\e2e\\TestCases\\POMDemo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "44f19d25-2648-43c0-8dfe-929d5ad6fd54",
+          "title": "Login POM Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify successfull Login",
+              "fullTitle": "Login POM Test Verify successfull Login",
+              "timedOut": null,
+              "duration": 41174,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "lPage.enterUsername('admin');\nlPage.enterPassword('admin123');\nlPage.loginClick();",
+              "err": {},
+              "uuid": "5b62156f-cd6d-47d8-aa0d-b6cd3b549a8a",
+              "parentUUID": "44f19d25-2648-43c0-8dfe-929d5ad6fd54",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify un-successfull Login",
+              "fullTitle": "Login POM Test verify un-successfull Login",
+              "timedOut": null,
+              "duration": 11266,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin');\ncy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('wrong');\ncy.get('.oxd-button').click();\ncy.get('.oxd-alert-content').should('contain', 'Invalid credentials');",
+              "err": {},
+              "uuid": "8d34a136-25ea-4a0e-b7bb-f5e05aa6a85e",
+              "parentUUID": "44f19d25-2648-43c0-8dfe-929d5ad6fd54",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5b62156f-cd6d-47d8-aa0d-b6cd3b549a8a",
+            "8d34a136-25ea-4a0e-b7bb-f5e05aa6a85e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52440,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reporter/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-27T09:39:47.902Z",
+    "end": "2023-07-27T09:39:52.686Z",
+    "duration": 4784,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9cafc4af-11bf-40fb-860e-52a4bbdd8dbf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCases\\trytestingLogin.cy.js",
+      "file": "cypress\\e2e\\TestCases\\trytestingLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "32431b64-b234-432b-8ced-708143b30350",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Login Feature",
+              "fullTitle": "Login Test Verify Login Feature",
+              "timedOut": null,
+              "duration": 997,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "tLogin.navigate();\ntLogin.enterUserName();\ntLogin.enterlastName();",
+              "err": {},
+              "uuid": "bac19395-df2b-4413-ac08-505f9f99f686",
+              "parentUUID": "32431b64-b234-432b-8ced-708143b30350",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bac19395-df2b-4413-ac08-505f9f99f686"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 997,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reporter/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
